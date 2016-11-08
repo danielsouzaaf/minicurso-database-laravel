@@ -11,4 +11,9 @@ class Usuario extends Model
     {
       return $this->hasMany('App\Comentario');
     }
+
+    public function roles()
+    {
+      return $this->belongsToMany('App\Role');
+    }
 }
